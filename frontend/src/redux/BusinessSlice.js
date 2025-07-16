@@ -1,16 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 // Initial state for BusinessSlice
 const initialState = {
-  business_name: '',
-  address: '',
-  food_type: '',
+  business_name: "",
+  address: "",
+  food_type: "",
   longitude: 0,
   latitude: 0,
 };
 
 const businessSlice = createSlice({
-  name: 'business',
+  name: "business",
   initialState,
   reducers: {
     setBusinessAttr: (state, action) => {
@@ -21,7 +21,6 @@ const businessSlice = createSlice({
           state[key] = payload[key];
         }
       });
-      alert(JSON.stringify(state))
     },
   },
 });
